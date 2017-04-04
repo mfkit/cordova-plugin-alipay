@@ -18,11 +18,11 @@ window.alipay.pay({
 }, function(successResults){alert(successResults)}, function(errorResults){alert(errorResults)});
 ```
 ## 支付宝开放平台签名设置
-1.下载签名（RSA2）生成工具：https://doc.open.alipay.com/docs/doc.htm?treeId=291&articleId=106097&docType=1
+1.[下载](https://doc.open.alipay.com/docs/doc.htm?treeId=291&articleId=106097&docType=1)签名（RSA2）生成工具
 2.生成后点击工具中的『上传公钥』
 
 ## PHP生成订单信息
-1.下载PHP SDK：https://doc.open.alipay.com/docs/doc.htm?spm=a219a.7629140.0.0.xQY82W&treeId=204&articleId=106079&docType=1
+1.[下载](https://doc.open.alipay.com/docs/doc.htm?spm=a219a.7629140.0.0.xQY82W&treeId=204&articleId=106079&docType=1)PHP SDK
 
 2.配置SDK
 ```
