@@ -1,5 +1,10 @@
 # cordova-plugin-alipay
-最新(2017)支付宝APP支付插件,支付Cordova,phonegap,ionic
+最新(2017)支付宝APP支付插件,支付Cordova,phonegap,ionic。本插件为服务器端（PHP）签名的版本，稍候会上传APP内实现签名的版本。
+
+## 诚邀精英
+欢迎技术牛人加入我们的团队，共同开发，为中国的开源事业做出贡献！
+另，欢迎绍兴地区的PHP,前端应聘
+QQ:88433062
 
 ## 支持的系统
 
@@ -13,7 +18,7 @@ window.alipay.pay({
 }, function(successResults){alert(successResults)}, function(errorResults){alert(errorResults)});
 ```
 ## 支付宝开放平台签名设置
-1.生成APPID、PID、RSA2_PRIVATE（工具地址：https://doc.open.alipay.com/docs/doc.htm?treeId=291&articleId=106097&docType=1）
+1.签名（RSA2）生成工具：https://doc.open.alipay.com/docs/doc.htm?treeId=291&articleId=106097&docType=1
 
 2.生成后点击工具中的『上传公钥』
 
@@ -66,6 +71,7 @@ exit(json_encode(array(
 ```
 
 4.回调处理
+```
 <?php
 $aop = new AopClient;
 $aop->alipayrsaPublicKey = ALIPAY_RSA2_PUPLIC;
@@ -74,3 +80,8 @@ $flag = $aop->rsaCheckV1($_POST, NULL, 'RSA2');
 if($flag) {
     //todo
 }
+```
+
+## PHP SDK常见错误
+1.Fatal error: Class 'LtObjectUtil' not found
+解决：请在 php.ini 开启 scandir 参数
