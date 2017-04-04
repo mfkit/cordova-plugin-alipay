@@ -23,6 +23,7 @@ window.alipay.pay({
 
 ## PHP生成订单信息
 1.下载PHP SDK：https://doc.open.alipay.com/docs/doc.htm?spm=a219a.7629140.0.0.xQY82W&treeId=204&articleId=106079&docType=1
+
 2.配置SDK
 ```
 <?php
