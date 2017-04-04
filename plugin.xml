@@ -6,7 +6,7 @@
 
   <name>AlipayPlugin</name>
   <license>MIT license</license>
-  <description>最新(2017)支付宝APP支付插件,支付Cordova,phonegap,ionic payment</description>
+  <description>最新(2017)支付宝APP支付插件,支持Cordova,phonegap,ionic</description>
   <keywords>cordova,ionic,phonegap,alipay,payment</keywords>
   <repo>https://github.com/mfkit/cordova-plugin-alipay.git</repo>
   <issue>https://github.com/mfkit/cordova-plugin-alipay/issues</issue>

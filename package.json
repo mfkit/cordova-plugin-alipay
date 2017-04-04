@@ -2,7 +2,7 @@
     "version": "0.10.0",
     "name": "cordova-plugin-alipay",
     "cordova_name": "AlipayPlugin",
-    "description": "最新(2017)支付宝APP支付插件,支付Cordova,phonegap,ionic",
+    "description": "最新(2017)支付宝APP支付插件,支持Cordova,phonegap,ionic",
     "license": "MIT license",
     "repo": "https://github.com/mfkit/cordova-plugin-alipay.git",
     "issue": "https://github.com/mfkit/cordova-plugin-alipay/issues",
