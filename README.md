@@ -13,13 +13,28 @@ window.alipay.pay({
 }, function(successResults){alert(successResults)}, function(errorResults){alert(errorResults)});
 ```
 ## 支付宝开放平台签名设置
-生成APPID、PID、RSA2_PRIVATE（工具地址：https://doc.open.alipay.com/docs/doc.htm?treeId=291&articleId=106097&docType=1）
+1.生成APPID、PID、RSA2_PRIVATE（工具地址：https://doc.open.alipay.com/docs/doc.htm?treeId=291&articleId=106097&docType=1）
 
-生成后点击工具中的『上传公钥』
+2.生成后点击工具中的『上传公钥』
 
 ## PHP生成订单信息
+1.下载PHP SDK：https://doc.open.alipay.com/docs/doc.htm?spm=a219a.7629140.0.0.xQY82W&treeId=204&articleId=106079&docType=1
+
+2.配置SDK
 ```
-require_once(FANWE_ROOT . 'payment/app/alipay/common.inc.php');
+<?php
+define('APPID', 'xxx');
+define('PID', 'xxx');
+define('NOTIFY_URL', 'xxx');
+// 应用公钥
+define('RSA2_PUPLIC', 'xxx');
+// 应用私钥
+define('RSA2_PRIVATE', 'xxx');
+// 支付宝公钥
+define('ALIPAY_RSA2_PUPLIC', 'xxx');
+```
+3.生成签名
+```
 $aop = new AopClient;
 $aop->gatewayUrl = "https://openapi.alipay.com/gateway.do";
 $aop->appId = APPID;
@@ -49,3 +64,13 @@ exit(json_encode(array(
     'orderid' => $orderid
 )));
 ```
+
+4.回调处理
+<?php
+$aop = new AopClient;
+$aop->alipayrsaPublicKey = ALIPAY_RSA2_PUPLIC;
+// 因为我们选择的是RSA2加密，所以参数三要传RSA2
+$flag = $aop->rsaCheckV1($_POST, NULL, 'RSA2');
+if($flag) {
+    //todo
+}
