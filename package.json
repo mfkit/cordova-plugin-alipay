@@ -1,0 +1,26 @@
+{
+    "version": "0.10.0",
+    "name": "mfkit-plugin-alipay",
+    "cordova_name": "AlipayPlugin",
+    "description": "支付宝支付插件，alipay payment",
+    "license": "MIT license",
+    "repo": "",
+    "issue": "",
+    "keywords": [
+        "cordova",
+        "ionic",
+        "phonegap"
+        "alipay",
+        "payment"
+    ],
+    "platforms": [
+        "android",
+        "ios"
+    ],
+    "engines": [
+        {
+            "name": "cordova",
+            "version": ">=3.4.0"
+        }
+    ]
+}
